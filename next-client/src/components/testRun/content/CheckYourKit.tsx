@@ -1,9 +1,7 @@
-import React from "react";
-import testRunSteps from "../../config/testRunSteps";
-import withTestRunStep from "../../src/middleware/withTestRunStep";
-import { Row, Col, BodyText, Images } from "nhsuk-react-components";
+import React from 'react';
+import { Row, Col, BodyText, Images } from 'nhsuk-react-components';
 
-const checkYourKit = () => (
+export default () => (
   <Row>
     <Col width="full">
       <BodyText>Your test kit should include:</BodyText>
@@ -39,20 +37,3 @@ const checkYourKit = () => (
     </Col>
   </Row>
 );
-
-export default (props) =>
-  withTestRunStep("Check your kit", props.navigation, {
-    Content: checkYourKit,
-    props,
-  });
-
-export const getServerSideProps = () => {
-  const step = testRunSteps["check-your-kit"];
-  const navigation = {};
-
-  if (step.nav.next) {
-    navigation.next = `/test-run/${step.nav.next}`;
-  }
-
-  return { props: { navigation } };
-};

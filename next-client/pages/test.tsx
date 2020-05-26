@@ -1,8 +1,11 @@
 import React from "react";
-import Router from "next/router";
+import { NextPageContext } from "next";
 
 export default () => <div />;
 
-export const getServerSideProps = () => {
-  Router.replace("/testRun/checkYourKit");
+export const getServerSideProps = (context: NextPageContext) => {
+  context.res.writeHead(301, {
+    Location: "/test-run/checkYourKit",
+  });
+  context.res.end();
 };

@@ -1,11 +1,10 @@
 import React from "react";
-import Asset from "../../ui/Asset";
 import { Row, Col } from "nhsuk-react-components";
 
 export default () => (
   <Row>
     <Col width="full">
-      <Asset
+      <img
         src="kit.png"
         alt="Image of the test kit"
         width={201}

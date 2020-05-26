@@ -1,9 +1,7 @@
 import React from "react";
-import withTestRunStep from "../../src/middleware/withTestRunStep";
-import testRunSteps from "../../config/testRunSteps";
 import { Row, Col, Details, BodyText } from "nhsuk-react-components";
 
-const selectAFinger = () => (
+export default () => (
   <Row>
     <Col width="full">
       <img
@@ -36,20 +34,3 @@ const selectAFinger = () => (
     </Col>
   </Row>
 );
-
-export default (props) =>
-  withTestRunStep("Select a finger", props.navigation, {
-    Content: selectAFinger,
-    props,
-  });
-
-export const getServerSideProps = () => {
-  const step = testRunSteps["select-a-finger"];
-  const navigation = {};
-
-  if (step.nav.next) {
-    navigation.next = `/test-run/${step.nav.next}`;
-  }
-
-  return { props: { navigation } };
-};
