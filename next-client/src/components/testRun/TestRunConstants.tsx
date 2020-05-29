@@ -4,10 +4,10 @@
 // can be found in the LICENSE file distributed with this file.
 import React from "react";
 import transcribeTestPath from "./transcribeTestPath";
-import CheckYourKit from "../../src/components/testRun/content/CheckYourKit";
-import WashAndDryHands from "../../src/components/testRun/content/WashAndDryHands";
-import SetUpTest from "../../src/components/testRun/content/SetUpTest";
-import SelectAFinger from "../../src/components/testRun/content/SelectAFinger";
+import CheckYourKit from "./content/CheckYourKit";
+import WashAndDryHands from "./content/WashAndDryHands";
+import SetUpTest from "./content/SetUpTest";
+import SelectAFinger from "./content/SelectAFinger";
 
 export const FORMID = "stepForm";
 export const UNSET_PROFILE_ID = "UNSET_PROFILE_ID";

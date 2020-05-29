@@ -2,11 +2,11 @@
 //
 // Use of this source code is governed by an LGPL-3.0 license that
 // can be found in the LICENSE file distributed with this file.
-import { TESTRUN_STEPS, getNextDefaultStep } from "./TestRunConstants";
+import { TESTRUN_STEPS, getNextDefaultStep } from "../../src/components/testRun/TestRunConstants";
 import React from "react";
 import { Container, Row, Col } from "nhsuk-react-components";
 
-import TestRunHeader from "./TestRunHeader";
+import TestRunHeader from "../../src/components/testRun/TestRunHeader";
 
 /**
  * Test Kit Tutorial.
@@ -21,7 +21,7 @@ export default ({ step }: { step: string }) => {
     currentStepName: step,
   });
 
-  const nextPath = nextDefaultStep ? `/testrun/${nextDefaultStep}` : undefined;
+  const nextPath = nextDefaultStep ? `/test-run/${nextDefaultStep}` : undefined;
 
   return (
     <Container>

@@ -1,0 +1,17 @@
+{
+  "name": "anxo4c-qrn97t",
+  "hash": "WEk725DCKj3Vnx2NOkZfqEf/JMQSmWzVPEP/Pyt5/Ag=",
+  "description": "API Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/home/dan/madetech/nhsx/antibody-web/next-client/.serverless_nextjs/api-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs10.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::877130379437:role/anxo4c-by985av"
+  },
+  "arn": "arn:aws:lambda:us-east-1:877130379437:function:anxo4c-qrn97t",
+  "region": "us-east-1"
+}
